@@ -24,6 +24,10 @@ namespace Ejercicio2
         Console.WriteLine("{0}^{1} = {2}", num, 2, (int)Math.Pow(num, 2));
         Console.WriteLine("{0}^{1} = {2}", num, 3, (int)Math.Pow(num, 3));
       }    
+      else
+      {
+                Console.WriteLine("ERROR. Reingresa el numero");
+      }
       Console.ReadKey();
     }
   }
