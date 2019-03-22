@@ -11,30 +11,28 @@ namespace Ejercicio4
         static void Main(string[] args)
         {
             Console.Title = "Ejercicio Nro 4";
-            int i;
-            //int j;
-            string numero;
-            bool numeroEnt;
-            int valor;
-            int contadorDivisores = 0;
-            Console.Write("Escriba un numero: ");
-            numero = Console.ReadLine();
-            numeroEnt = int.TryParse(numero, out valor);
-            if(valor != 0)
+            int i = 0;
+            int j;
+            int suma;
+            int contadorPerfecto = 0;
+            do
             {
-                for(i = 1; i < valor; i++)
+                i++;
+                suma = 0;
+                for(j=1; j<i; j++)
                 {
-                    if(valor / i == 0)
+                    if(i % j == 0)
                     {
-                        contadorDivisores += i;
+                        suma += j;
                     }
-                    if(contadorDivisores == valor)
-                    {
-                        Console.WriteLine("Numero divisor {0}", i);
-                    }
-                   
                 }
-            }
+                if(suma == i)
+                {
+                    Console.WriteLine("El numero perfecto es {0}", suma);
+                    contadorPerfecto++;
+                }
+            } while (contadorPerfecto != 4);
+            Console.ReadKey();
         }
     }
 }

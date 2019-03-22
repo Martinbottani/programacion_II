@@ -1,0 +1,7 @@
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio7\bin\Debug\Ejercicio7.exe.config
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio7\bin\Debug\Ejercicio7.exe
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio7\bin\Debug\Ejercicio7.pdb
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio7\obj\Debug\Ejercicio7.csprojAssemblyReference.cache
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio7\obj\Debug\Ejercicio7.csproj.CoreCompileInputs.cache
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio7\obj\Debug\Ejercicio7.exe
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio7\obj\Debug\Ejercicio7.pdb

@@ -1,0 +1,6 @@
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio6\bin\Debug\Ejercicio6.exe.config
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio6\bin\Debug\Ejercicio6.exe
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio6\bin\Debug\Ejercicio6.pdb
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio6\obj\Debug\Ejercicio6.csproj.CoreCompileInputs.cache
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio6\obj\Debug\Ejercicio6.exe
+D:\Martin Bottani\Programacion II\Clase1\Ejercicio6\obj\Debug\Ejercicio6.pdb
