@@ -1,0 +1,7 @@
+D:\Martin Bottani\programacion_II-master\Ejercicio5 CAMPUS\Ejercicio5 CAMPUS\obj\Debug\Ejercicio5 CAMPUS.csprojAssemblyReference.cache
+D:\Martin Bottani\programacion_II-master\Ejercicio5 CAMPUS\Ejercicio5 CAMPUS\obj\Debug\Ejercicio5 CAMPUS.csproj.CoreCompileInputs.cache
+D:\Martin Bottani\programacion_II-master\Ejercicio5 CAMPUS\Ejercicio5 CAMPUS\bin\Debug\Ejercicio5 CAMPUS.exe.config
+D:\Martin Bottani\programacion_II-master\Ejercicio5 CAMPUS\Ejercicio5 CAMPUS\bin\Debug\Ejercicio5 CAMPUS.exe
+D:\Martin Bottani\programacion_II-master\Ejercicio5 CAMPUS\Ejercicio5 CAMPUS\bin\Debug\Ejercicio5 CAMPUS.pdb
+D:\Martin Bottani\programacion_II-master\Ejercicio5 CAMPUS\Ejercicio5 CAMPUS\obj\Debug\Ejercicio5 CAMPUS.exe
+D:\Martin Bottani\programacion_II-master\Ejercicio5 CAMPUS\Ejercicio5 CAMPUS\obj\Debug\Ejercicio5 CAMPUS.pdb

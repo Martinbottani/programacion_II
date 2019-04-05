@@ -26,32 +26,28 @@ namespace Ejercicio5_CAMPUS
             return productos;
         }
 
-        public string MostrarEstante(Estante e)
+        public static string MostrarEstante(Estante e)
         {
             string cadena;
             int i;
             string codigoDeBarras;
             cadena = "La ubicacion del estante es: " + e.ubicacionEstante;
-            for (i = 0; i < productos.Length; i++)
+            for (i = 0; i < e.productos.Length; i++)
             {
-                codigoDeBarras = (string)productos[i];
-                cadena = cadena + Producto.MostrarProducto(productos[i]);
+                codigoDeBarras = (string)e.productos[i];
+                cadena = cadena + Producto.MostrarProducto(e.productos[i]);
             }
             return cadena;
         }
 
         public static bool operator ==(Estante e, Producto p)
         {
-            bool retorno = false;
             int i;
-            string marcaProducto;
-            marcaProducto = p.GetMarca();
-            for (i = 0; i < e.productos.Length; i++)
+            bool retorno = false;
+            for(i = 0; i < e.productos.Length; i++)
             {
-                if (e.productos[i].GetMarca() == marcaProducto)
-                {
-                    retorno = true;
-                }       
+                retorno = !(e.productos[i] != p);
+                break;
             }
             return retorno;
         }
@@ -60,13 +56,15 @@ namespace Ejercicio5_CAMPUS
         {
             bool retorno = false;
             int i;
-            string marcaProducto;
-            marcaProducto = p.GetMarca();
             for (i = 0; i < e.productos.Length; i++)
             {
-                if (e.productos[i].GetMarca() != marcaProducto)
+                if (!(Object.ReferenceEquals(e.productos[i], null)))
                 {
-                    retorno = true;
+                    if (e.productos[i].GetMarca() != p.GetMarca())
+                    {
+                        retorno = true;
+                    }
+                    break;
                 }
             }
             return retorno;
@@ -77,13 +75,13 @@ namespace Ejercicio5_CAMPUS
             bool retorno = false;
             int i;
             if(e != p)
-            {
-                retorno = true;
+            {               
                 for (i = 0; i < e.productos.Length; i++)
                 {                  
                     if (Object.ReferenceEquals(e.productos[i], null))
                     {
                         e.productos[i] = p;
+                        retorno = true;
                     }
                     break;
                 }
