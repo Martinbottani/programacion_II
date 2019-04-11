@@ -20,11 +20,10 @@ namespace Entidades
             {
                 retorno = "+";
             }
-
             return retorno;
         }
 
-        public double Operar(Numero num1, Numero num2, string operador)
+        public static double Operar(Numero num1, Numero num2, string operador)
         {
             double result = 0;
             string aux;
@@ -46,7 +45,6 @@ namespace Entidades
             {
                 result = num1 / num2;
             }
-
             return result;
         }
     }
