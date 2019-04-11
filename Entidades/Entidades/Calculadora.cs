@@ -29,7 +29,6 @@ namespace Entidades
             double result = 0;
             string aux;
             aux = Calculadora.ValidarOperador(operador);
-
             if (aux == "+")
             {
                 result = num1 + num2;

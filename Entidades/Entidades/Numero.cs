@@ -12,22 +12,22 @@ namespace Entidades
 
         public Numero()
         {
-            this.numero = 0;
+            SetNumero = Convert.ToString(0);
         }
 
         public Numero(double numero)
         {
-            this.numero = numero;
+            SetNumero = Convert.ToString(numero);
         }
 
         public Numero(string strNumero)
         {
-            this.numero = Convert.ToDouble(strNumero);
+            SetNumero = strNumero;
         }
 
         private string SetNumero
         {
-            set { numero = ValidarNumero(value); }
+            set {numero = ValidarNumero(value);}
         }
 
         public static double ValidarNumero(string strNumero)
