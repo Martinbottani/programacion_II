@@ -5,3 +5,10 @@ D:\Martin Bottani\Programacion II\Clase1\Ejercicio23\obj\Debug\Ejercicio23.cspro
 D:\Martin Bottani\Programacion II\Clase1\Ejercicio23\obj\Debug\Ejercicio23.csproj.CoreCompileInputs.cache
 D:\Martin Bottani\Programacion II\Clase1\Ejercicio23\obj\Debug\Ejercicio23.exe
 D:\Martin Bottani\Programacion II\Clase1\Ejercicio23\obj\Debug\Ejercicio23.pdb
+D:\Martin Bottani\programacion_II\Ejercicio23\bin\Debug\Ejercicio23.exe.config
+D:\Martin Bottani\programacion_II\Ejercicio23\bin\Debug\Ejercicio23.exe
+D:\Martin Bottani\programacion_II\Ejercicio23\bin\Debug\Ejercicio23.pdb
+D:\Martin Bottani\programacion_II\Ejercicio23\obj\Debug\Ejercicio23.csprojAssemblyReference.cache
+D:\Martin Bottani\programacion_II\Ejercicio23\obj\Debug\Ejercicio23.csproj.CoreCompileInputs.cache
+D:\Martin Bottani\programacion_II\Ejercicio23\obj\Debug\Ejercicio23.exe
+D:\Martin Bottani\programacion_II\Ejercicio23\obj\Debug\Ejercicio23.pdb

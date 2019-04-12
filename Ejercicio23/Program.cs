@@ -19,7 +19,7 @@ namespace Ejercicio23
             Dolar dolar2 = new Dolar(0);
             euro2 = (Euro)peso1;
             peso2 = (Pesos)euro1;
-            dolar2 = (Dolar)euro1;
+            dolar2 = (Dolar)peso1;
             Console.WriteLine("{0}", euro2.GetCantidad());
             Console.WriteLine("{0}", peso2.GetCantidad());
             Console.WriteLine("{0}", dolar2.GetCantidad());

@@ -39,7 +39,7 @@ namespace Ejercicio23
 
         public static explicit operator Dolar(Euro p)
         {
-            double result = p.cantidad / Euro.GetCotizacion();
+            double result = p.cantidad * Euro.GetCotizacion();
             Dolar cantid = new Dolar(result);
             return cantid;
         }

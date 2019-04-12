@@ -13,7 +13,7 @@ namespace Ejercicio23
 
         static Pesos()
         {
-            cotizRespectoDolar = 42.99f;
+            cotizRespectoDolar = 42.72f;
         }
 
         public Pesos(double cantidad)
@@ -37,9 +37,9 @@ namespace Ejercicio23
             return cotizRespectoDolar;
         }
 
-        public static explicit operator Dolar(Pesos d)
+        public static explicit operator Dolar(Pesos p)
         {
-            double result = d.cantidad / Pesos.GetCotizacion();
+            double result = p.cantidad / Pesos.GetCotizacion();
             Dolar cantid = new Dolar(result);
             return cantid;
         }
@@ -47,7 +47,7 @@ namespace Ejercicio23
         public static explicit operator Euro(Pesos p)
         {
             Dolar auxCantDolar = (Dolar)p;
-            double result = auxCantDolar.GetCantidad() / Euro.GetCotizacion();
+            double result = auxCantDolar.GetCantidad() * Euro.GetCotizacion();
             Euro cantid = new Euro(result);
             return cantid;
         }
