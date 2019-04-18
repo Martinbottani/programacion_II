@@ -11,7 +11,7 @@ namespace Ejercicio33
         private string nombre;
         private int numero;
 
-        private string Nombre
+        public string Nombre
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Ejercicio33
             }
         }
 
-        private int Numero
+        public int Numero
         {
             get
             {
@@ -39,6 +39,7 @@ namespace Ejercicio33
         public Cliente(int numero, string nombre) : this(numero)
         {
             Nombre = nombre;
+
         }
 
         public static bool operator !=(Cliente c1, Cliente c2)
@@ -53,8 +54,7 @@ namespace Ejercicio33
 
         public static bool operator ==(Cliente c1, Cliente c2)
         {
-            bool retorno = !(c1 != c2);
-            return retorno;
+            return !(c1 != c2);
         }
     }
 }

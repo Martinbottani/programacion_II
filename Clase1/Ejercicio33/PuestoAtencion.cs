@@ -16,7 +16,7 @@ namespace Ejercicio33
         private static int numeroActual;
         private Puesto puesto;
         
-        private int NumeroActual
+        public int NumeroActual
         {
             get
             {
