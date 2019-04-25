@@ -36,7 +36,7 @@ namespace CentralTelefonica
 
         private float CalcularCosto()
         {
-            float retorno;
+            float retorno = 0;
             if(franjaHoraria == Franja.Franja_1)
             {
                 retorno = base.Duracion * 0.99f;
@@ -45,7 +45,7 @@ namespace CentralTelefonica
             {
                 retorno = base.Duracion * 1.25f;
             }
-            else
+            else if(franjaHoraria == Franja.Franja_3)
             {
                 retorno = base.Duracion * 0.66f;
             }
