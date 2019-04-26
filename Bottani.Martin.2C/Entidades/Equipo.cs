@@ -79,11 +79,47 @@ namespace Entidades
 
         public static Equipo operator +(Equipo e, Jugador j)
         {
-            if(e.jugadores.Count < 6 && e != j && j.ValidarAptitud())
+            if(e.jugadores.Count < Equipo.cantidadMaximaJugadores    && e != j && j.ValidarAptitud())
             {
                 e.jugadores.Add(j);
             }
             return e;
+        }
+
+        public bool ValidarEquipo(Equipo e)
+        {
+            bool retorno = false;
+            int contArquero = 0;
+            int contCentral = 0;
+            int contDelantero = 0;
+            int contDefensor = 0;
+            if (e.directorTecnico != null)
+            {
+                foreach(Jugador jugador in e.jugadores)
+                {
+                    if(jugador.Posicion == Posicion.Arquero)
+                    {
+                        contArquero++;
+                    }
+                    else if(jugador.Posicion == Posicion.Central)
+                    {
+                        contCentral++;
+                    }
+                    else if(jugador.Posicion == Posicion.Defensor)
+                    {
+                        contDefensor++;
+                    }
+                    else if(jugador.Posicion == Posicion.Delantero)
+                    {
+                        contDelantero++;
+                    }
+                }
+                if(contDelantero > 0 && contDefensor > 0 && contCentral > 0 && contArquero == 1 && e.jugadores.Count == cantidadMaximaJugadores)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
         }
     }
 }
