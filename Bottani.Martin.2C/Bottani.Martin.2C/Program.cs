@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Entidades;
 namespace VistaConsola
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            /*
+        {           
             // Genero un equipo nuevo
             Equipo equipo = new Equipo("UTN");
             // Genero un Director Técnico y lo asigno al equipo
@@ -54,8 +53,7 @@ namespace VistaConsola
                 Console.WriteLine("El equipo es válido");
             else
                 Console.WriteLine("El equipo no es válido");
-            Console.ReadKey();
-            */
+            Console.ReadKey();         
         }
     }
 }

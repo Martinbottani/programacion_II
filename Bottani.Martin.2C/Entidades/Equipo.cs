@@ -34,7 +34,7 @@ namespace Entidades
             jugadores = new List<Jugador>();
         }
 
-        public Equipo(string nombre)
+        public Equipo(string nombre) : this()
         {
             this.nombre = nombre;
         }
@@ -42,10 +42,10 @@ namespace Entidades
         public static explicit operator string(Equipo e)
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.AppendFormat("Nombre de Equipo: {0}\nCantidad maxima de jugadores: {1}\n", e.Nombre, cantidadMaximaJugadores);
+            mostrar.AppendFormat("Nombre de Equipo: {0}\nCantidad maxima de jugadores: {1}\n\n", e.Nombre, cantidadMaximaJugadores);
             if (e.directorTecnico != null)
             {
-                mostrar.AppendFormat("{0}\n {1}", e.directorTecnico.Mostrar());
+                mostrar.AppendFormat("{0}\n", e.directorTecnico.Mostrar());
             }
             else if(!e.directorTecnico.ValidarAptitud())
             {
@@ -79,14 +79,14 @@ namespace Entidades
 
         public static Equipo operator +(Equipo e, Jugador j)
         {
-            if(e.jugadores.Count < Equipo.cantidadMaximaJugadores    && e != j && j.ValidarAptitud())
+            if(e.jugadores.Count < Equipo.cantidadMaximaJugadores && e != j && j.ValidarAptitud())
             {
                 e.jugadores.Add(j);
             }
             return e;
         }
 
-        public bool ValidarEquipo(Equipo e)
+        public static bool ValidarEquipo(Equipo e)
         {
             bool retorno = false;
             int contArquero = 0;

@@ -30,7 +30,7 @@ namespace Entidades
         public override string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.AppendFormat("Director Tecnico:\n{0}", base.Mostrar(), "\nAños de experiencia: {1}", AñosExperiencia);
+            mostrar.AppendFormat("*DIRECTOR TECNICO*\n\n{0}", base.Mostrar(), "\nAños de experiencia: {1}\n", AñosExperiencia);
             return mostrar.ToString();
         }
 

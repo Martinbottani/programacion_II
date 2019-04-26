@@ -1,6 +1,6 @@
 ﻿namespace VistaForm
 {
-    partial class Form1
+    partial class FormDT
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -104,6 +104,7 @@
             this.btnCrear.TabIndex = 5;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnValidar
             // 
@@ -113,6 +114,7 @@
             this.btnValidar.TabIndex = 6;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // txtNombre
             // 
@@ -138,6 +140,11 @@
             // numDNI
             // 
             this.numDNI.Location = new System.Drawing.Point(124, 113);
+            this.numDNI.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.numDNI.Name = "numDNI";
             this.numDNI.Size = new System.Drawing.Size(100, 20);
             this.numDNI.TabIndex = 10;
@@ -149,11 +156,11 @@
             this.numExperiencia.Size = new System.Drawing.Size(100, 20);
             this.numExperiencia.TabIndex = 11;
             // 
-            // Form1
+            // FormDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 322);
+            this.ClientSize = new System.Drawing.Size(322, 276);
             this.Controls.Add(this.numExperiencia);
             this.Controls.Add(this.numDNI);
             this.Controls.Add(this.numEdad);
@@ -167,8 +174,9 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormDT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormDT";
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numExperiencia)).EndInit();

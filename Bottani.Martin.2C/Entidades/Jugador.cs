@@ -46,7 +46,7 @@ namespace Entidades
         public override string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.AppendFormat("Jugador:\n{0}", base.Mostrar(), "\nPeso: {1}\nAltura: {2}\nPosicion: {3}", peso, altura, Posicion);
+            mostrar.AppendFormat("*JUGADOR*\n\n{0}", base.Mostrar(), "\nPeso: {1}\nAltura: {2}\nPosicion: {3}", peso, altura, Posicion);
             return mostrar.ToString();
         }
 
