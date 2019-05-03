@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bottani.Martin", "Bottani.Martin\Bottani.Martin.csproj", "{15C63F97-E61E-4DF3-8D93-41606FBA2C2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaConsola", "Bottani.Martin\VistaConsola.csproj", "{15C63F97-E61E-4DF3-8D93-41606FBA2C2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entitades", "Entitades\Entitades.csproj", "{3CA7361F-3E53-4220-9D2A-EDA2FBAD17DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaForm", "VistaForm\VistaForm.csproj", "{042F2112-87F6-45B6-9C84-B2681436DFCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{15C63F97-E61E-4DF3-8D93-41606FBA2C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15C63F97-E61E-4DF3-8D93-41606FBA2C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15C63F97-E61E-4DF3-8D93-41606FBA2C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA7361F-3E53-4220-9D2A-EDA2FBAD17DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA7361F-3E53-4220-9D2A-EDA2FBAD17DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA7361F-3E53-4220-9D2A-EDA2FBAD17DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA7361F-3E53-4220-9D2A-EDA2FBAD17DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042F2112-87F6-45B6-9C84-B2681436DFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042F2112-87F6-45B6-9C84-B2681436DFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042F2112-87F6-45B6-9C84-B2681436DFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042F2112-87F6-45B6-9C84-B2681436DFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

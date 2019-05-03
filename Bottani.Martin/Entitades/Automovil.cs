@@ -21,9 +21,8 @@ namespace Entitades
             this.color = color;
         }
 
-        public Automovil(string patente, ConsoleColor color, int valorHora) : base(patente)
+        public Automovil(string patente, ConsoleColor color, int valorHora) : this(patente, color)
         {
-            this.color = color;
             Automovil.valorHora = valorHora;
         }
 
@@ -35,9 +34,20 @@ namespace Entitades
         public override string ConsultarDatos()
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.AppendFormat("\n{0}\nColor: {1}\nValor de la hora: {2}\n", base.ImprimirTicket(), color, valorHora);
+            mostrar.AppendLine(ImprimirTicket());
+            mostrar.AppendFormat("\nColor: {0}\nValor de la hora: {1}\n", color, valorHora);
             return mostrar.ToString();
         }
+
+        public override string ImprimirTicket()
+        {
+            StringBuilder mostrar = new StringBuilder();
+            int valorDeEstadia = base.ingreso.Hour * valorHora;
+            mostrar.AppendLine(base.ImprimirTicket());
+            mostrar.AppendFormat("\nCosto de estadia: {0}", valorDeEstadia);
+            return mostrar.ToString();
+        }
+
 
     }
 }

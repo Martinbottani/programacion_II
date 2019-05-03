@@ -37,15 +37,15 @@ namespace Entitades
         public virtual string ImprimirTicket()
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.AppendFormat("Ingreso: {0}\n", ingreso);
             mostrar.AppendLine(this.ToString());
+            mostrar.AppendFormat("\nIngreso: {0}", ingreso);
             return mostrar.ToString();
         }
 
         public override string ToString()
         {
             StringBuilder mostrar = new StringBuilder();
-            mostrar.AppendFormat("Patente {0}", Patente);
+            mostrar.AppendFormat("\nPatente {0}", Patente);
             return mostrar.ToString();
         }
 
