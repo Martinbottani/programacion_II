@@ -9,13 +9,13 @@ namespace Entitades
     public class Moto : Vehiculo
     {
         private int cilindrada;
-        private static short ruedas;
+        private short ruedas;
         private static int valorHora;
 
         static Moto()
         {
             valorHora = 30;
-            ruedas = 2;
+            //ruedas = 2;
         }
         
         public Moto(string patente, int cilindrada) : base(patente)
@@ -25,7 +25,7 @@ namespace Entitades
 
         public Moto(string patente, int cilindrada, short ruedas) : this(patente, cilindrada)
         {
-            Moto.ruedas = ruedas;
+            this.ruedas = ruedas;
         }
         
         public Moto(string patente, int cilindrada, short ruedas, int valorHora) : this(patente, cilindrada, ruedas)
