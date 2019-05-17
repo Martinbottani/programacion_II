@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2DA4021F-B893-475D-ADBC-E1C9142FB1D7}</ProjectGuid>
+    <ProjectGuid>{1F2F755B-D07D-47CA-9C15-FEB8C8527098}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CentralTelefonica</RootNamespace>
-    <AssemblyName>CentralTelefonica</AssemblyName>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

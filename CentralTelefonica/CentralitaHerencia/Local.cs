@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CentralTelefonica
+namespace CentralHerencia
 {
     public class Local : Llamada
     {
         protected float costo;
 
-        public float CostoLlamada
+        public override bool Equals(object obj)
+        {
+            return obj is Local;
+        }
+
+        public override float CostoLlamada
         {
             get
             {
@@ -32,13 +37,17 @@ namespace CentralTelefonica
             return costo * base.Duracion;
         }
 
-        public string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
             mostrar.AppendFormat("{0}\nSu costo de llamada es de: {1}", base.Mostrar() , CostoLlamada);
             return mostrar.ToString();
         }
 
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
 
     }
 }

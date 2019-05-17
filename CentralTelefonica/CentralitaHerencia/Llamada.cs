@@ -1,10 +1,10 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CentralTelefonica
+namespace CentralHerencia
 {
     public enum TipoLlamada
     {
@@ -12,7 +12,7 @@ namespace CentralTelefonica
         Provincial,
         Todas
     }
-    public class Llamada
+    public abstract class Llamada
     {
         protected float duracion;
         protected string nroDestino;
@@ -49,14 +49,14 @@ namespace CentralTelefonica
             this.nroOrigen = nroOrigen;
         }
 
-        public string Mostrar()
+        protected virtual string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
             mostrar.AppendFormat("Numero de Origen: {0}\n Numero de Destino: {1}\nDestino: {2}", NroOrigen, NroDestino, Duracion);
             return mostrar.ToString();
         }
 
-        public int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
+        public static int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
         {
             int retorno = 0;
             if(llamada1.duracion < llamada2.duracion)
@@ -68,6 +68,28 @@ namespace CentralTelefonica
                 retorno = 1;
             }
             return retorno;
+        }
+        public static bool operator ==(Llamada l1, Llamada l2)
+        {
+            bool retorno = false;
+            if (l1.Equals(l2) &&
+               l1.NroOrigen == l2.NroOrigen &&
+               l1.NroDestino == l2.NroDestino)
+            {
+                retorno = true;
+            }
+
+            return retorno;
+        }
+
+        public static bool operator !=(Llamada llamada1, Llamada llamada2)
+        {
+            return !(llamada1 == llamada2);
+        }
+
+        public abstract float CostoLlamada
+        {
+            get;
         }
     }
 }

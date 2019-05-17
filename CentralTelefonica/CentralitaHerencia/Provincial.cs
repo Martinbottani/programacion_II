@@ -4,17 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CentralTelefonica
+namespace CentralHerencia
 {
-    public enum Franja
-    {
-        Franja_1,
-        Franja_2,
-        Franja_3
-    }
+    
     public class Provincial : Llamada
     {
+        public enum Franja
+        {
+            Franja_1,
+            Franja_2,
+            Franja_3
+        }
+
         protected Franja franjaHoraria;
+
+        public override bool Equals(object obj)
+        {
+            return obj is Provincial;
+        }
 
         public Provincial(Franja miFranja, Llamada llamada) : base(llamada.Duracion, llamada.NroDestino, llamada.NroOrigen)
         {
@@ -26,7 +33,7 @@ namespace CentralTelefonica
             this.franjaHoraria = miFranja;
         }
 
-        public float CostoLlamada
+        public override float CostoLlamada
         {
             get
             {
@@ -52,11 +59,16 @@ namespace CentralTelefonica
             return retorno;
         }
 
-        public string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder mostrar = new StringBuilder();
             mostrar.AppendFormat("{0}\nSu costo de llamada es de: {1}\nLa franja horaria es de: {2}", base.Mostrar(), CostoLlamada, franjaHoraria);
             return mostrar.ToString();
+        }
+
+        public override string ToString()
+        {
+            return this.Mostrar();
         }
     }
 }
