@@ -37,10 +37,9 @@ namespace Ejercicio68
             }
         }
 
-        public Persona(string nombre, string apellido)
+        public Persona()
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
+            
         }
 
         public string Mostrar()

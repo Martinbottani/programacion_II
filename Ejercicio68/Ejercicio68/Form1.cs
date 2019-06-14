@@ -21,7 +21,24 @@ namespace Ejercicio68
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+            if(persona == null)
+            {
+                persona = new Persona();
+                persona.Nombre = txtNombre.Text;
+                persona.Apellido = txtApellido.Text;
+                EventoString.Invoke("Se ha creado la persona.");
+                btnCrear.Text = "Actualizar";
 
+            }
+            else
+            {
+                if(persona.Nombre != txtNombre.Text || persona.Apellido != txtApellido.Text)
+                {
+                    persona.Nombre = txtNombre.Text;
+                    persona.Apellido = txtApellido.Text;
+                    EventoString.Invoke("Se ha modificado el nombre y/o el apellido.");
+                }
+            }
         }
 
         public void NotificarCambio(string cambio)
