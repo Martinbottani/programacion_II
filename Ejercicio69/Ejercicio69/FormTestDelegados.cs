@@ -12,7 +12,7 @@ namespace Ejercicio69
 {
     public partial class FormTestDelegados : Form
     {
-        private event DelegadoString EventoStrig;
+        public event FormMostrar.DelegadoString EventoStrig;
         public FormTestDelegados()
         {
             InitializeComponent();

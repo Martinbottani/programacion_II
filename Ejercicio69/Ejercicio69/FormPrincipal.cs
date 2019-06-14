@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Ejercicio69
 {
-    public delegate void DelegadoString(string msg);
     public partial class frmPrincipal : Form
     {
-        public event DelegadoString EventoStrig;
+        FormTestDelegados formito = new FormTestDelegados();
+        FormMostrar mostrarsito = new FormMostrar();
         public frmPrincipal()
         {
             InitializeComponent();
@@ -21,15 +21,14 @@ namespace Ejercicio69
 
         private void testDelegadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTestDelegados formito = new FormTestDelegados();
             formito.MdiParent = this;
             formito.Show();
         }
 
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMostrar mostrarsito = new FormMostrar();
             mostrarsito.MdiParent = this;
+            formito.EventoStrig += mostrarsito.ActualizarNombre;
             mostrarsito.Show();
         }
 
