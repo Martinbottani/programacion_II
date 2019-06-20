@@ -11,10 +11,14 @@ using System.Threading;
 
 using Entidades;
 
+
 namespace Patentes
 {
+    public delegate void FinExposicionPatente(VistaPatente vp);
+    public delegate void MostrarPatente(object patente);
     public partial class VistaPatente : UserControl
-    {        
+    {
+        public event FinExposicionPatente finExposicion;
         public VistaPatente()
         {
             InitializeComponent();
@@ -32,11 +36,14 @@ namespace Patentes
 
                     // Llamar al hilo principal
                     // ALUMNO
-
+                    MostrarPatente mostrar = new MostrarPatente(this.MostrarPatente);
+                    object[] obj = new object[] { patente };
+                    this.Invoke(mostrar, obj);
                     Thread.Sleep(r.Next(2000, 5000));
 
                     // Agregar evento de que finalizó la exposición de la patente
                     // ALUMNO
+                    finExposicion.Invoke(this);
                 }
                 catch (Exception) { }
             }

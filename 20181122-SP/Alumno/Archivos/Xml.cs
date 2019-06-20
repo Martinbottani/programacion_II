@@ -22,8 +22,32 @@ namespace Archivos
             }
             catch(Exception)
             {
+
             }
-            
+            finally
+            {
+                escritor.Close();
+            }  
+        }
+
+        public void Leer(string archivo, out T datos)
+        {
+
+            XmlSerializer serializador = new XmlSerializer(typeof(T));
+            XmlTextReader lector = null;
+            try
+            {
+                lector = new XmlTextReader(archivo);
+                datos = (T)serializador.Deserialize(lector);
+            }
+            catch (Exception)
+            {
+                datos = default(T);
+            }
+            finally
+            {
+                lector.Close();
+            }
         }
     }
 }
